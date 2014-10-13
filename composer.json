@@ -15,7 +15,7 @@
                 "app/design/frontend/default/rwd/template/promo"
             ],
             [
-                "app/code/local/Webtise/Promo",
+                "app/code/Webtise/Promo",
                 "app/code/local/Webtise/Promo"
             ],
             [
