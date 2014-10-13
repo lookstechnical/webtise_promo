@@ -1,0 +1,16 @@
+{
+  "name": "webtise/promo",
+  "type": "magento-module",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  },
+  "extra":{
+        "map":[
+            ["app/design/adminhtml/default/default/layout/promos.xml", "app/design/adminhtml/default/default/layout/promos.xml"],
+            ["app/design/frontend/default/rwd/template/promo", "app/design/frontend/default/rwd/template/promo"],
+            ["app/code/local/Webtise/Promo", "app/code/local/Webtise/Promo"],
+            ["app/etc/modules/Webtise_Promo.xml", "app/etc/modules/Webtise_Promo.xml"],
+            
+        ]
+   }
+}

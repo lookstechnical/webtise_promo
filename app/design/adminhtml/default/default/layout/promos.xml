@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <promos_adminhtml_promos_index>
+        <reference name="content">
+            <block type="absolutepearls/adminhtml_promos" name="promo" />
+        </reference>
+    </promos_adminhtml_promos_index>
+    
+</layout>

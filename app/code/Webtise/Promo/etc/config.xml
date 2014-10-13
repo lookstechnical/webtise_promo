@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Webtise_Promo>
+      <version>0.1.0</version>
+    </Webtise_Promo>
+  </modules>
+  <global>
+  	<helpers>
+  		<promo>
+                <class>Webtise_Promo_Helper</class>
+        </promo>
+  	</helpers>
+  	 <models>
+            <promo>
+                <class>Webtise_Promo_Model</class>
+                <resourceModel>promo_mysql4</resourceModel>
+            </promo>
+            <promo_mysql4>
+                <class>Webtise_Promo_Model_Mysql4</class>
+                <entities>
+                    <promo>
+                        <table>webtise_promos</table>
+                    </promo>
+                </entities>
+            </promo_mysql4>     
+  	 </models>
+  	  <resources>
+           <promo_setup>
+                <setup>
+                    <module>Webtise_Promo</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </promo_setup>
+            
+            <promo_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </promo_write>
+            
+            <promo_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </promo_read>
+        </resources>
+         <blocks>
+            <promo>
+                <class>Webtise_Promo_Block</class>
+            </promo>
+         </blocks>
+   
+  </global>
+   <admin>
+        <routers>
+			<promos>
+				<use>admin</use>
+				<args>
+					<module>Webtise_Promo</module>
+					<frontName>promos</frontName>
+				</args>
+			</promos>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+			<cms>
+				<children>
+				 <promo module="cms">
+				  <title>Promos</title>
+					<sort_order>71</sort_order>     
+					<action>promos/adminhtml_promos</action>  
+				  </promo>        
+				</children>
+			</cms>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Webtise_Promo>
+							<title>Promos Module</title>
+							<sort_order>10</sort_order>
+						</Webtise_Promo>
+						<system>
+	                        <children>
+	                            <config>
+	                                <children>
+	                                    <promo>
+	                                        <title>Inchoo - All</title>
+	                                    </promo>
+	                                </children>
+	                            </config>
+	                        </children>
+	                    </system>
+					</children>
+					
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<promo>
+					<file>promos.xml</file>
+				</promo>
+			</updates>
+		</layout>
+    </adminhtml>     
+</config>
