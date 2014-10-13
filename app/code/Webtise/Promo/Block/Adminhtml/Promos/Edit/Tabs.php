@@ -1,6 +1,6 @@
 <?php
 
-class Webtise_Absolutepearls_Block_Adminhtml_Promos_Edit_Tabs extends Mage_Adminhtml_Block_Widget_Tabs
+class Webtise_Promo_Block_Adminhtml_Promos_Edit_Tabs extends Mage_Adminhtml_Block_Widget_Tabs
 {
 
   public function __construct()
@@ -16,7 +16,7 @@ class Webtise_Absolutepearls_Block_Adminhtml_Promos_Edit_Tabs extends Mage_Admin
       $this->addTab('form_section', array(
           'label'     => Mage::helper('cms')->__('Promo Information'),
           'title'     => Mage::helper('cms')->__('Promo Information'),
-          'content'   => $this->getLayout()->createBlock('absolutepearls/adminhtml_promos_edit_tab_form')->toHtml(),
+          'content'   => $this->getLayout()->createBlock('promo/adminhtml_promos_edit_tab_form')->toHtml(),
       ));
      
       return parent::_beforeToHtml();

@@ -71,7 +71,7 @@
 			<cms>
 				<children>
 				 <promo module="cms">
-				  <title>Promos</title>
+				  <title>Promo</title>
 					<sort_order>71</sort_order>     
 					<action>promos/adminhtml_promos</action>  
 				  </promo>        
@@ -94,7 +94,7 @@
 	                            <config>
 	                                <children>
 	                                    <promo>
-	                                        <title>Inchoo - All</title>
+	                                        <title>Promo - All</title>
 	                                    </promo>
 	                                </children>
 	                            </config>
@@ -107,9 +107,9 @@
 		</acl>
 		<layout>
 			<updates>
-				<promo>
+				<promos>
 					<file>promos.xml</file>
-				</promo>
+				</promos>
 			</updates>
 		</layout>
     </adminhtml>     

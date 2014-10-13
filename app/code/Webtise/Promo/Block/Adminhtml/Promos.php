@@ -1,5 +1,5 @@
 <?php
-class Webtise_Absolutepearls_Block_Adminhtml_Promos extends Mage_Adminhtml_Block_Widget_Grid_Container
+class Webtise_Promo_Block_Adminhtml_Promos extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
 	
 	protected $_addButtonLabel = 'Add New Promo';
@@ -8,7 +8,7 @@ class Webtise_Absolutepearls_Block_Adminhtml_Promos extends Mage_Adminhtml_Block
     {
         parent::__construct();
         $this->_controller = 'adminhtml_promos';
-        $this->_blockGroup = 'absolutepearls';
+        $this->_blockGroup = 'promo';
         $this->_headerText = Mage::helper('cms')->__('Promos');
     }    
      public function getPromos()     

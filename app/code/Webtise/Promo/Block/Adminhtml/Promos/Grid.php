@@ -1,6 +1,6 @@
 <?php
 
-class Webtise_Absolutepearls_Block_Adminhtml_Promos_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Webtise_promo_Block_Adminhtml_Promos_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
   public function __construct()
   {
@@ -13,7 +13,7 @@ class Webtise_Absolutepearls_Block_Adminhtml_Promos_Grid extends Mage_Adminhtml_
 
   protected function _prepareCollection()
   {
-      $collection = Mage::getModel('absolutepearls/promo')->getCollection();
+      $collection = Mage::getModel('promo/promo')->getCollection();
       $this->setCollection($collection);
       return parent::_prepareCollection();
   }

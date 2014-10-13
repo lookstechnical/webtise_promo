@@ -1,13 +1,13 @@
 <?php
 
-class Webtise_Absolutepearls_Block_Adminhtml_Promos_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
+class Webtise_Promo_Block_Adminhtml_Promos_Edit extends Mage_Adminhtml_Block_Widget_Form_Container
 {
     public function __construct()
     {
         parent::__construct();
                  
         $this->_objectId = 'id';
-        $this->_blockGroup = 'absolutepearls';
+        $this->_blockGroup = 'promo';
         $this->_controller = 'adminhtml_promos';
         
         $this->_updateButton('save', 'label', Mage::helper('cms')->__('Save Item'));

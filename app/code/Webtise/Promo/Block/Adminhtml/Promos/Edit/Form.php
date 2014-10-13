@@ -1,6 +1,6 @@
 <?php
 
-class Webtise_Absolutepearls_Block_Adminhtml_Promos_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
+class Webtise_Promo_Block_Adminhtml_Promos_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
 {
   protected function _prepareForm()
   {
