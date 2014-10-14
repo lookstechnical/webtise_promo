@@ -15,6 +15,10 @@
                 "app/design/frontend/default/rwd/template/promo"
             ],
             [
+                "app/design/frontend/default/rwd/layout/editor.xml",
+                "app/design/frontend/default/default/layout/editor.xml"
+            ],
+            [
                 "app/code/Webtise/Promo",
                 "app/code/local/Webtise/Promo"
             ],

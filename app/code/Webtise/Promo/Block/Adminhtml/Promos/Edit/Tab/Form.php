@@ -2,6 +2,15 @@
 
 class Webtise_Promo_Block_Adminhtml_Promos_Edit_Tab_Form extends Mage_Adminhtml_Block_Widget_Form
 {
+  
+  protected function _prepareLayout() {
+    parent::_prepareLayout();
+    if (Mage::getSingleton('cms/wysiwyg_config')->isEnabled()) {
+        $this->getLayout()->getBlock('head')->setCanLoadTinyMce(true);
+    }
+  }
+
+	
   protected function _prepareForm()
   {
       $form = new Varien_Data_Form();
@@ -15,12 +24,14 @@ class Webtise_Promo_Block_Adminhtml_Promos_Edit_Tab_Form extends Mage_Adminhtml_
           'name'      => 'title',
       ));
       
-     /* $fieldset->addField('sub_title', 'textarea', array(
-          'label'     => Mage::helper('cms')->__('Sub Title'),
-          'class'     => '',
-          'required'  => false,
-          'name'      => 'sub_title',
-      ));*/
+      $fieldset->addField('free_text', 'editor', array(
+          'label'     => Mage::helper('cms')->__('Free Text'),
+          'name'      => 'free_text',
+          'config'    => Mage::getSingleton('cms/wysiwyg_config')->getConfig(),
+		  'wysiwyg'   => true,
+          'required' => true
+
+      ));
       
       $fieldset->addField('link', 'text', array(
           'label'     => Mage::helper('cms')->__('Link'),

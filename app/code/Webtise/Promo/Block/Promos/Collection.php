@@ -1,6 +1,6 @@
 <?php
 
-class Webtise_Absolutepearls_Block_Promos_Collection extends Mage_Core_Block_Template
+class Webtise_Promo_Block_Promos_Collection extends Mage_Core_Block_Template
 {
 
 	private $collection;
@@ -8,14 +8,14 @@ class Webtise_Absolutepearls_Block_Promos_Collection extends Mage_Core_Block_Tem
 	public function __construct()
 	{
 		parent::__construct();
-		$this->setTemplate('promos/collection.phtml');
+		$this->setTemplate('promo/collection.phtml');
 	}
 	public function getCollection()
 	{
-		$collection = Mage::getModel('absolutepearls/promo')->getCollection()
+		
+		$collection = Mage::getModel('promo/promo')->getCollection()
 			->addFieldToFilter('collection',array('like' => '%'.$this->collection.'%'))
 			;//->sortBy('order','asc');
-		
 		return $collection;
 	}
 	

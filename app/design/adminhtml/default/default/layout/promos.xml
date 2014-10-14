@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
     <promos_adminhtml_promos_index>
+    	
         <reference name="content">
             <block type="promo/adminhtml_promos" name="promo" />
         </reference>
