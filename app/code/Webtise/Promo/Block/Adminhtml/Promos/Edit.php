@@ -25,6 +25,13 @@ class Webtise_Promo_Block_Adminhtml_Promos_Edit extends Mage_Adminhtml_Block_Wid
             }
         ";
     }
+    
+    protected function _prepareLayout() {
+	 parent::_prepareLayout();
+	 if (Mage::getSingleton('cms/wysiwyg_config')->isEnabled()) {
+	  $this->getLayout()->getBlock('head')->setCanLoadTinyMce(true);
+	 }
+	} 
 
     public function getHeaderText()
     {

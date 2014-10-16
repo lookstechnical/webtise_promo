@@ -10,7 +10,9 @@ class Webtise_Promo_Block_Adminhtml_Promos extends Mage_Adminhtml_Block_Widget_G
         $this->_controller = 'adminhtml_promos';
         $this->_blockGroup = 'promo';
         $this->_headerText = Mage::helper('cms')->__('Promos');
-    }    
+    } 
+    
+  
      public function getPromos()     
      { 
         if (!$this->hasData('promos')) {

@@ -1,5 +1,5 @@
 <default>
-        <reference name="head">
+    <reference name="head">
         <action method="setCanLoadExtJs"><flag>1</flag></action>
         <action method="setCanLoadTinyMce"><flag>1</flag></action>
         <action method="addJs"><script>mage/adminhtml/variables.js</script></action>
@@ -12,5 +12,5 @@
         <action method="addJs"><script>prototype/prototype.js</script></action>
         <action method="addItem"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
         <action method="addItem"><type>js_css</type><name>prototype/windows/themes/magento.css</name></action>
-        </reference>
+    </reference>
 </default>
